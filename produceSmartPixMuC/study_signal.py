@@ -191,7 +191,7 @@ for filename in os.listdir(directory_path):
 
 # save histos to file
 
-file_path = "/home/youeric/PixelSim2/produceSmartPixMuC/signal_tracklists"
+file_path = "signal_tracklists"
 float_precision=5
 binsize = 500
 numFiles = int(np.ceil(len(tracks)/binsize))

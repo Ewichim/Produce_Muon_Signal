@@ -29,7 +29,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(usage=__doc__, formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-o", "--outDir", help="Output directory", default="./Simulation_Output")
     parser.add_argument("-j", "--ncpu", help="Number of cores to use", default=20, type=int)
-    parser.add_argument("-p", "--pixelAVdir", help="pixelAV directory", default="/home/youeric/PixelSim2/pixelav")
+    parser.add_argument("-p", "--pixelAVdir", help="pixelAV directory", default="../pixelav")
     ops = parser.parse_args()
 
     # get absolute path for semiparametric directory

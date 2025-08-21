@@ -6,7 +6,7 @@ import matplotlib.colors as colors
 
 # Directory paths
 SIGNAL_DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BIB_DATA_DIR = "/home/youeric/PixelSim2/MuonColliderSim_eric/Simulation_Output"
+BIB_DATA_DIR = "../Simulation_Output"
 PLOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "plots")
 os.makedirs(PLOT_DIR, exist_ok=True)
 

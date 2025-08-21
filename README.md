@@ -6,7 +6,6 @@ This repository contains simulation tools for producing and analyzing Muon Colli
 
 - **`produceSmartPixMuC/`** - Initial track generation and preprocessing
 - **`MuonColliderSim/`** - Main simulation pipeline and analysis
-- **`MuonColliderSim_eric/`** - Eric's development version with beam spot studies
 - **`pixelav/`** - Pixel detector response simulation (PixelAV)
 
 ## Quick Start: Producing Muon Collider Signal Tracks
@@ -61,7 +60,7 @@ python launchMuC.py [options]
 **Key Options:**
 - `-o, --outDir`: Output directory (default: `./Simulation_Output`)
 - `-j, --ncpu`: Number of CPU cores to use (default: 20)
-- `-p, --pixelAVdir`: Path to PixelAV directory (default: `/home/youeric/PixelSim2/pixelav`)
+- `-p, --pixelAVdir`: Path to PixelAV directory (default: `../pixelav`)
 
 ### Step 3: Analysis and Visualization
 
