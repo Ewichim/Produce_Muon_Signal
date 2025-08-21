@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#SBATCH --job-name=list_clusters 
+#SBATCH --time=24:00:00
+#SBATCH --array=1-1
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1 
+#SBATCH --partition=defq
+#SBATCH --mail-type=end
+#SBATCH --mail-user=morris@jhu.edu
+#
+# cd /tmp
+cd /home/mswartz1/scrtmp
+mkdir "TEMPLATE_$SLURM_JOBID"
+cd "TEMPLATE_$SLURM_JOBID"
+cp /home/mswartz1/pixelav/SIRUTH.SPR .
+cp /home/mswartz1/clusters_bpix/ppixel2.init .
+cp /home/mswartz1/clusters_bpix/wgt_pot.init .
+cp /home/mswartz1/clusters_bpix/track_list.txt .
+/home/mswartz1/pixelav/ppixelav2_list_trkpy_n_2f $SLURM_ARRAY_TASK_ID 50000
+gzip pixel_clusters_d*.out
+cp pixel_clusters_d*.out.gz /home/mswartz1/finished/
+cp seedfile* /home/mswartz1/finished/
+cd ..
+rm -r "TEMPLATE_$SLURM_JOBID"
+
