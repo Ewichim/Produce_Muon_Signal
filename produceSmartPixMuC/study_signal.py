@@ -76,7 +76,7 @@ for filename in os.listdir(directory_path):
             hit_pdg = mcp.getPDG() if mcp else None
             hit_id = mcp.id() if mcp else None
 
-            if abs(hit_pdg) != 13: continue 
+            if abs(hit_pdg) != 13 or abs(hit_pdg) != 11: continue 
 
             # momentum at production
             mcp_p = mcp.getMomentum()

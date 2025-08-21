@@ -48,7 +48,7 @@ for file_path in slcio_files:
             mcp = hit.getMCParticle()
             hit_pdg = mcp.getPDG() if mcp else None
             hit_id = mcp.id() if mcp else None
-            if abs(hit_pdg) != 13:
+            if abs(hit_pdg) != 13 or abs(hit_pdg) != 11:
                 continue
             mcp_p = mcp.getMomentum()
             mcp_tlv = ROOT.TLorentzVector()
